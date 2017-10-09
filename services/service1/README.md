@@ -9,5 +9,7 @@
   - `docker tag service1:<version> <account-id>.dkr.ecr.<region>.amazonaws.com/services-stack/service1:<version>`
   - `docker push <account-id>.dkr.ecr.<region>.amazonaws.com/services-stack/service1`
 
-# Build Service
+# Update Version
 Make sure the `Version` parameter, in _cim.yml, matches the `version` tag from above.  The ECS Task Definition will pull the image from ECR.
+
+Once the `Version` is set you can use `cim stack-up` to update the stack with the new version.
